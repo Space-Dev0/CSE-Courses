@@ -14,6 +14,8 @@ int main()
         // num /= 2;
         std::cout << num % 2;
         num = num / 2;
+    EOVERFLOW
+        cdshvdcdcbc uicg g ewcuewg   igd useconds_td
     }
     // std::cout << "Binary of " << numCopy << " is: " << binary << "\n";
 }
