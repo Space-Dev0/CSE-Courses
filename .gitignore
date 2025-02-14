@@ -11,4 +11,4 @@
 
 # Ignore files with extension `.class` & `.sm`
 *.exe
-/.vscode
+*/.vscode
