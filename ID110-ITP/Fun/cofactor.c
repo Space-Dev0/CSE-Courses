@@ -2,7 +2,7 @@
 
 void cofactor(int(*arr)[3])
 {
-    int i, j, k = 0, l = 0,m,n, temp[2][2],arrCopy[3][3];
+    int i, j, k = 0, l = 0, temp[2][2],arrCopy[3][3];
 
     for ( i = 0; i < 3; i++)
     {
@@ -17,12 +17,12 @@ void cofactor(int(*arr)[3])
     {
         for ( j = 0; j < 3; j++)
         {
-            for ( m = 0; m < 3; m++)
+            for ( int m = 0; m < 3; m++)
             {
                 if (m==i)
                     continue;
                 
-                for ( n = 0; n < 3; n++)
+                for ( int n = 0; n < 3; n++)
                 {
                     if (n==j)
                         continue;
@@ -49,11 +49,8 @@ void cofactor(int(*arr)[3])
             }
             else
                 arr[i][j] = temp[1][0]*temp[0][1]-temp[1][1]*temp[0][0];
-            
         }
-        
     }
-    return;
 }
 
 

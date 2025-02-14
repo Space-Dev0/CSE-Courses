@@ -34,8 +34,7 @@ void bubbleSort(int *arr, int n)
         {
             if (arr[i] > arr[j])
             {
-                int temp;
-                temp = arr[i];
+                const int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
