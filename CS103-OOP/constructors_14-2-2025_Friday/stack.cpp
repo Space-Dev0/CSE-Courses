@@ -7,20 +7,26 @@ class stack
     private:
         int data[10];
         int top;
-    
-    public:
-        /*void init()
-        {
-            top=-1;
-        }*/
        
-       stack()
+    public:
+   /* static stack init()
+    {
+        return stack();
+    }   */ 
+        stack() //constructor defined
        {
         top=-1;
+        cout<<"Constructor defined";
        }
+       stack(int x)
+       {
+        top = x;
+        cout<<"Now the top of stack is changed to: "<<x;
+       }
+    
         void push(int x)
         {
-            if(top==9)
+            if(top>=9)
             {
                 cout<< "Over flow, can't push anymore elements"<<endl;
                 return;
@@ -59,6 +65,7 @@ class stack
 int main()
 {
     stack s;
+    //=stack::init();
     //s.initialize();
     //s.top=100;
     //s.init();
@@ -69,5 +76,8 @@ int main()
     s.display();
     //s.init();
     s.display();
+    //s.stack(10);
+    stack a(10);
+    a.push(100);
     return 0;
 }
