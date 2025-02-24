@@ -21,7 +21,7 @@ Calculator::Calculator()
 double Calculator::solver(std::string expr)
 {
     double evaluates, num1{0}, num2{0};
-    char ch;
+    char ch{'+'};
     bool isnum1 = true;
     for (int i = 0; i < expr.length(); i++)
     {
