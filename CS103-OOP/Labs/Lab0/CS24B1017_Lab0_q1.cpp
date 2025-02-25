@@ -43,11 +43,11 @@ int main()
 {
     float balance{0.0};
     std::string acc_no;
-    char *acc_name = (char*)malloc(101);
+    char *acc_name = (char *)malloc(101);
     char temp;
     std::cout << "Enter Account number: ";
     std::cin >> acc_no;
-    std::cin.get(temp); 
+    std::cin.get(temp);
     std::cout << "Enter Account holder name: ";
     std::cin.getline(acc_name, 100);
     std::string acc_n = acc_name;
@@ -73,7 +73,7 @@ int main()
             B.withdraw(amount);
             break;
         case 'C':
-            std::cout << "Balance is: " << B.get_balance()<<"\n";
+            std::cout << "Balance is: " << B.get_balance() << "\n";
             break;
         default:
             exit(0);
