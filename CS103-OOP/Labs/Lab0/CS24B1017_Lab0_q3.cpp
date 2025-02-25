@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <string_view>
 
 class Calculator
 {
@@ -7,6 +7,7 @@ private:
     double solver(std::string_view);
     double evaluate(double, double, char);
     std::string_view subexpression(std::string_view, int *);
+    bool err{0};
 
 public:
     Calculator();
@@ -16,14 +17,21 @@ public:
 
 Calculator::Calculator()
 {
+    std::cout << "Enter expression: ";
     std::string expression;
     std::cin >> expression;
-    std::cout << "Result: " << solver(expression) << "\n";
+    double result = solver(expression);
+    if (err)
+        return;
+    std::cout << "Result: " << result << "\n";
 }
 
 Calculator::Calculator(std::string_view expression)
 {
-    std::cout << "Result: " << solver(expression) << "\n";
+    double result = solver(expression);
+    if (err)
+        return;
+    std::cout << "Result: " << result << "\n";
 }
 
 std::string_view Calculator::subexpression(std::string_view expr, int *i)
@@ -32,6 +40,12 @@ std::string_view Calculator::subexpression(std::string_view expr, int *i)
     while (count != 0)
     {
         (*i)++;
+        if (*i >= expr.length())
+        {
+            std::cout << "Error: Mismatched parentheses!\n";
+            err = true;
+            return "\0";
+        }
         if (expr.at(*i) == '(')
             count++;
         else if (expr.at(*i) == ')')
@@ -53,12 +67,14 @@ double Calculator::evaluate(double num1, double num2, char ch)
     case '/':
         if (num2 == 0)
         {
-            std::cout << "Error: Division by zero!";
+            std::cout << "Error: Division by zero!\n";
+            err = true;
             break;
         }
         return num1 / num2;
     default:
         std::cout << "Error: Invalid operator!\n";
+        err = true;
         break;
     }
     return 0;
@@ -114,6 +130,5 @@ Calculator::~Calculator()
 
 int main()
 {
-    std::cout << "Enter expression: ";
     Calculator C;
 }
