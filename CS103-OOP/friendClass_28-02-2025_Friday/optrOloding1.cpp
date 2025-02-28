@@ -13,10 +13,9 @@ public:
 
     complex(int r, int i) : real(r), img(i) {}
 
-    /*                     ----> since operator precedence is from left to right
-                           |     x = a + b we already know a is which object
-                           |     thus we can only specify one operand
-                           |                                                   */
+    /*                  -------> since operator precedence is from left to right
+                        |        x = a + b we already know a is which object
+                        |        thus we can only specify one operand            */
     complex operator+(complex &obj)
     {
 
