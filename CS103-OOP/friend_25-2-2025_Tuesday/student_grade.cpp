@@ -64,7 +64,7 @@ public:
 
 void student::display()
 {
-    std::cout << "Name: " << name << "\nRoll No.: " << roll_no << "\nGrade: " << g1.giveGrade();
+    std::cout << "Name: " << name << "\nRoll No.: " << roll_no << "\nGrade: " << g1.giveGrade() << "\n";
 }
 
 student::student()
