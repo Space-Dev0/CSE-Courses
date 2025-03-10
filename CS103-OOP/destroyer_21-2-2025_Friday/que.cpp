@@ -8,7 +8,7 @@ private:
     int *front;
     int *rear;
 
-public:
+public: 
     que(int s);
     ~que();
     void insert(int a);
