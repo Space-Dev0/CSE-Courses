@@ -6,8 +6,6 @@
 
 # Unignore all dirs
 !*/
-
 *.exe
-*/*/.*
-*/.*
-/.*
+*.vscode
+*.idea
