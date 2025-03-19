@@ -47,7 +47,6 @@
 */
 
 /*
-
 Access Specifiers:
 
                 |     Public      Protected       Private    |
@@ -57,25 +56,7 @@ Parent Class    |       y             y              y       |
 Derived Class   |       y             y              n       |
                 |                                            |
 Others          |       y             n              n       |
-
 */
-
-/*
- *  Inheritance is a "is a" relation, Example:
- *  - Car is a Vehicle
- *  - Bike is a Vehicle
- */
-
-/*  Derived class syntax:
- *
- *
- *   <Class_Derived_Name> : [Access specifier] <base_class_name>{
- *
- *   Class Contents
- *
- *   };
- *
- */
 
 class vehicle
 {
