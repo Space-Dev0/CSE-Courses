@@ -26,7 +26,10 @@ void gauss_sqr::solver(int i)
 
 void gauss_sqr::displayAll()
 {
-    cout << "\n\tAugmented Matrix\tSolution Vector\n";
+    cout << "\n";
+    for (int i = 0; i < numRows / 2; i++)
+        cout << "\t";
+    cout << "Augmented Matrix\tSolution Vector\n";
     for (int i = 0; i < numRows; i++)
     {
         for (int j = 0; j < numRows; j++)
