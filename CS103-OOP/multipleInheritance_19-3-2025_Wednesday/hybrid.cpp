@@ -9,7 +9,7 @@ protected:
     int Aa;
 
 public:
-    A() { std::cout << "Constructor of A called\n"; }
+    //A() { std::cout << "Constructor of A called\n"; }
     A(int a) : Aa(a) { std::cout << "Constructor of A called\n"; }
 };
 
