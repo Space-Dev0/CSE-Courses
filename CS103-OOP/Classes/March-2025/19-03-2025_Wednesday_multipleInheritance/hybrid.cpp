@@ -9,7 +9,7 @@ protected:
     int Aa;
 
 public:
-    //A() { std::cout << "Constructor of A called\n"; }
+    A() { std::cout << "Default Constructor of A called\n"; }
     A(int a) : Aa(a) { std::cout << "Constructor of A called\n"; }
 };
 
@@ -19,7 +19,7 @@ protected:
     int Bb;
 
 public:
-    B(int a, int b) : Bb(a), A(b) { std::cout << "Constructor of B called\n"; }
+    B(int a, int b) : Bb(a) { std::cout << "Constructor of B called\n"; }
 };
 
 class C : virtual protected A
@@ -28,13 +28,13 @@ protected:
     int Cc;
 
 public:
-    C(int c, int d) : Cc(c), A(d) { std::cout << "Constructor of C called\n"; }
+    C(int c, int d) : Cc(c) { std::cout << "Constructor of C called\n"; }
 };
 
 class D : protected B, protected C
 {
 public:
-    D(int a, int b, int c, int d) : B(a, b), C(c, d)
+    D(int a, int b, int c, int d) : B(a, b), C(c, d), A(b)
     {
         std::cout << "Constructor of D called\n";
     }
