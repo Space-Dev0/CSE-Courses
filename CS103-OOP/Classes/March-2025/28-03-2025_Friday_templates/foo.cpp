@@ -13,7 +13,13 @@ public:
     friend void show(MyClass<T> &obj1, MyClass<P> &obj2);
 
     template <typename T>
-    void get(T var);
+    void get(T var)
+    {
+        if (data > T)
+        {
+            std::cout << data << "\n";
+        }
+    }
 };
 
 template <typename T, typename P>
