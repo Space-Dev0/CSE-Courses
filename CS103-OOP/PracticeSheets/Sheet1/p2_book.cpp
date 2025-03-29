@@ -14,8 +14,7 @@ public:
         std::getline(std::cin, title);
         std::cout << "Enter Author: ";
         std::getline(std::cin, author);
-        std::cout << "Enter ISBN";
-        std::cin >> ISBN;
+        std::cout << "Enter ISBN: ";
     }
     void display()
     {
