@@ -198,3 +198,27 @@ void matrix::upperTriangular()
         }
     }
 }
+
+void matrix::lowerTriangular(vector<double> &vec)
+{
+    if (!squarematrix)
+    {
+        std::cerr << "err: Matrix not square\n";
+        return;
+    }
+    else if (vec.size() != numRows)
+    {
+        std::cerr << "err: vector size not equal\n";
+        return;
+    }
+    for (int i = 0; i < numRows - 1; i++)
+    {
+        for (int k = i + 1; k < numRows; k++)
+        {
+            double multiplier = (data[k][i] / data[i][i]);
+            for (int j = 0; j < numRows; j++)
+                data[k][j] -= multiplier * data[i][j];
+            vec[k] -= multiplier * vec[i];
+        }
+    }
+}

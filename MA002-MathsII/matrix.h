@@ -21,6 +21,7 @@ protected:
     bool error{false};
     void upperTriangular(vector<double> &vec);
     void upperTriangular();
+    void lowerTriangular(vector<double> &vec);
 
 public:
     matrix(int n);
