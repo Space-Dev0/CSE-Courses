@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::list<char> L = {'m', 'a', 'l', 'a', 'a', 'l', 'a', 'm'};
+    std::list<char> L = {'m', 'a', 'l', 'a', 'y', 'a', 'l', 'a', 'm'};
     std::list L2 = L;
     L2.reverse();
     if (L == L2)
