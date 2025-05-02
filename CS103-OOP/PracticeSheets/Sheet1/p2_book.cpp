@@ -411,6 +411,16 @@ public:
             break;
         }
     }
+
+    ~Library()
+    {
+        for (auto &&i : list_Books)
+        {
+            delete i;
+        }
+
+        list_Books.clear();
+    }
 };
 
 int main()
