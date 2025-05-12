@@ -12,7 +12,7 @@ int main()
         std::set<int> tempSet;
         std::cout << "Enter elements in set: ";
         std::string setStr;
-        std::cin.ignore();
+
         std::getline(std::cin, setStr);
 
         if (setStr.empty())
@@ -25,6 +25,7 @@ int main()
         std::cout << "Enter integer to associate with set: ";
         int intToLink;
         std::cin >> intToLink;
+        std::cin.ignore();
         map.emplace(intToLink, tempSet);
     }
 
